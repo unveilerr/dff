@@ -114,28 +114,6 @@ Files are compared in three stages for maximum speed:
 2. **Quick hash** — reads only 8 KB per file (first + last 4 KB), eliminates the vast majority of non‑duplicates without touching the full file
 3. **Full SHA-256** — only for files that passed the quick-hash check
 
-## TUI layout
-
-```
-┌─ ⚡ DFF v0.1.0 │ 5 groups · 23 files · 1.2 GB wasted ─────┐
-│                                                             │
-│   1.  IMG_2022.JPG      4 × 12 MB  (36 MB wasted)          │
-│     ◉ ./photos/IMG_2022.JPG              12 MB              │
-│     ▸ ./backup/photos/IMG_2022.JPG       12 MB              │
-│     ◉ ./Downloads/IMG_2022(1).JPG        12 MB              │
-│     ◉ ./Desktop/IMG_2022.JPG             12 MB              │
-│                                                             │
-│   2.  project-backup.tar.gz   3 × 800 MB  (1.6 GB wasted)   │
-│     ○ ./archive/project-backup-2024.tar.gz  800 MB          │
-│     ○ ./old/project-backup.tar.gz            800 MB         │
-│     ○ ./tmp/project-backup.tar.gz            800 MB         │
-│                                                             │
-│  ──────────────────────────── 60% · file 8 of 23            │
-├─ 3 marked · [Space] hold+scroll · [m/M] group · [a] all … ─┤
-│ [↑/↓] nav · [Space] mark · [m] mark group · [a] all · …    │
-└─────────────────────────────────────────────────────────────┘
-```
-
 ## Colour scheme
 
 DFF uses only **standard ANSI colours** (no hardcoded RGB), so it automatically
